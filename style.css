@@ -1,0 +1,164 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* 3D Scene and Card */
+.scene {
+    perspective: 800px; /* This creates the 3D space */
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back of the element */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background: white;
+}
+
+.card-back {
+    background: #f1f1f1;
+    transform: rotateY(180deg);
+}
+
+/* Form Styles */
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+/* Birthday Page Styles */
+.birthday-container {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.birthday-container h1 {
+    font-size: 4em;
+    animation: bounce 1s infinite;
+}
+
+/* Cake Styles */
+.cake {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+}
+.candle {
+    width: 10px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: -40px;
+    left: 95px;
+}
+.candle::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    top: -10px;
+    animation: flame 1.5s infinite;
+}
+.top {
+    width: 200px; height: 40px; background: #f9aadd; border-radius: 50% / 20px;
+    position: absolute; top: 0;
+}
+.middle {
+    width: 200px; height: 60px; background: #e06377;
+    position: absolute; top: 20px;
+}
+.bottom {
+    width: 200px; height: 80px; background: #c83349;
+    position: absolute; top: 80px;
+}
+
+/* Confetti Animation */
+.confetti {
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    position: absolute;
+    top: -20px;
+    animation: confetti-fall 5s linear infinite;
+}
+.confetti:nth-child(2) { background-color: #0f0; left: 20%; animation-delay: -2s; }
+.confetti:nth-child(3) { background-color: #00f; left: 60%; animation-delay: -4s; }
+
+@keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@keyframes flame {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 10px orange; }
+    50% { transform: scale(1.1); box-shadow: 0 0 20px orange; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
