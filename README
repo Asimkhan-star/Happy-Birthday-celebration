@@ -1,0 +1,41 @@
+🎉 Happy Birthday Celebration
+A fun and interactive 3D Login + Birthday Celebration web project built using HTML, CSS, and JavaScript.
+After a successful login, the page celebrates a birthday with animations, music, and festive effects!
+________________________________________
+✨ Features
+•	3D-style interactive login page
+•	Button click sound (click.mp3)
+•	Auto-play birthday song (birthday-song.mp3) after login
+•	Smooth animations and celebration effects
+•	Fully responsive design
+________________________________________
+🧠 Built With
+•	HTML — Page structure
+•	CSS3 — Styling and 3D effects
+•	JavaScript (ES6) — Interactivity and sound control
+________________________________________
+📁 Project Structure
+Happy-Birthday-Celebration/
+├── index.html
+├── style.css
+├── script.js
+├── click.mp3
+├── birthday-song.mp3
+
+________________________________________
+🚀 Live Demo
+🔗 View Project
+________________________________________
+💻 How to Use
+1.	Open index.html in any browser.
+2.	Enter login details to start the celebration.
+3.	Enjoy music and birthday animations 🎂
+________________________________________
+📸 Screenshots
+ 
+ 
+________________________________________
+🧑‍💻 Author
+Muhammad Asim Khan
+Frontend Developer | Creative Web Projects
+🔗 GitHub Profile
